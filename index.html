@@ -61,10 +61,11 @@
     .navbar-nav {
       display: flex;
       gap: 20px;
-      backdrop-filter: 10px;
+      backdrop-filter: blur(1px);
+      border: 2px solid rgba(255, 255, 255, 0.157);
       padding: 1rem 2rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.447);
+      border-radius: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 4, 0.57);
     }
 
     .navbar-nav a {
@@ -79,12 +80,12 @@
     .navbar-nav a::before {
       content: "";
       position: absolute;
-      top: -5px;
-      left: -10px;
-      right: -10px;
-      bottom: -5px;
+      top: -10px;
+      left: -15px;
+      right: -15px;
+      bottom: -10px;
       background-color: var(--color-accent-brown);
-      border-radius: 10px;
+      border-radius: 20px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.447);
       z-index: -1;
       opacity: 0;
@@ -93,7 +94,7 @@
     }
 
     .navbar-nav a:hover::before {
-      opacity: 0.57;
+      opacity: 1;
       transform: scale(1);
     }
 
@@ -101,14 +102,117 @@
       color: var(--color-text);
     }
 
+    .navbar-extra a {
+      font-size: 15px;
+      color: var(--color-text);
+      margin: 0 0.5rem;
+      transition: all 0.3s ease-in-out;
+    }
+
     #menu {
       display: none;
+    }
+
+    .home {
+      background-image: url(properties/hi.jpg);
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      min-height: 100vh;
+      filter: brightness(0.7);
+    }
+
+    .home .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: var(--color-paper);
+    }
+
+    .home .content h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .home .content h1 span {
+      color: var(--color-accent-yellow);
+      font-weight: 700;
+    }
+
+    .home .content h1 span span {
+      color: var(--color-accent-red);
+    }
+
+    .navbar-nav.active {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .navbar-nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 20px;
+        right: 60px;
+        background-color: var(--color-surface);
+        padding: 1rem;
+        border-radius: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.447);
+      }
+
+      .navbar-nav.active {
+        display: flex;
+      }
+
+      .navbar-nav a {
+        margin: 0.15rem 0;
+      }
+
+      .navbar-nav a::before {
+        top: -5px;
+        left: -10px;
+        right: -10px;
+        bottom: -5px;
+      }
+
+      #menu {
+        display: block;
+      }
+
+      #bars {
+        font-size: 24px;
+        color: var(--color-text);
+      }
+
+      .home .content h1 {
+        font-size: 2rem;
+      }
+
+      .home .content h1 span {
+        font-size: 1.6rem;
+      }
+
+      .home .content h1 span span {
+        font-size: 1.57rem;
+      }
+
+      .logo img {
+        width: 50px;
+        height: 50px;
+      }
+
+      .navbar-extra a {
+        font-size: 12px;
+      }
     }
   </style>
   <body>
     <nav>
       <div class="logo">
-        <img src="logo.png" alt="Logo" />
+        <img src="properties/hi.jpg" alt="Logo" />
       </div>
       <div class="navbar-nav">
         <a href="">Home</a>
@@ -120,6 +224,27 @@
         <a href="" id="menu"><i class="fa-solid fa-bars" id="bars"></i></a>
       </div>
     </nav>
+    <section id="home" class="home">
+      <div class="content">
+        <h1>
+          Welkam to <span>Buron.<span>id</span></span>
+        </h1>
+      </div>
+    </section>
   </body>
-  <script></script>
+  <script>
+    const menu = document.querySelector("#menu");
+    const navbarNav = document.querySelector(".navbar-nav");
+
+    menu.addEventListener("click", function (e) {
+      e.preventDefault(); // mencegah reload
+      navbarNav.classList.toggle("active");
+    });
+
+    document.addEventListener("click", function (e) {
+      if (!menu.contains(e.target) && !navbarNav.contains(e.target)) {
+        navbarNav.classList.remove("active");
+      }
+    });
+  </script>
 </html>
