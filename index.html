@@ -54,18 +54,21 @@
     }
 
     .logo img {
-      width: 100px;
-      height: 100px;
+      width: 90px;
+      border-radius: 50px;
     }
 
     .navbar-nav {
       display: flex;
-      gap: 20px;
-      backdrop-filter: blur(1px);
-      border: 2px solid rgba(255, 255, 255, 0.157);
-      padding: 1rem 2rem;
-      border-radius: 20px;
-      box-shadow: 0 2px 4px rgba(0, 0, 4, 0.57);
+      gap: 50px;
+      padding: 0.4rem 2rem;
+      border-radius: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.277);
+      background: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(9px);
+      -webkit-backdrop-filter: blur(14px);
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
 
     .navbar-nav a {
@@ -80,22 +83,26 @@
     .navbar-nav a::before {
       content: "";
       position: absolute;
-      top: -10px;
-      left: -15px;
-      right: -15px;
-      bottom: -10px;
+      top: -3px;
+      left: -2px;
+      right: -2px;
+      bottom: -3px;
       background-color: var(--color-accent-brown);
-      border-radius: 20px;
+      border-radius: 30px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.447);
       z-index: -1;
       opacity: 0;
-      transform: scale(0.95);
+      transform: scale(0.3);
       transition: all 0.3s ease-in-out;
     }
 
     .navbar-nav a:hover::before {
       opacity: 1;
       transform: scale(1);
+      top: -3px;
+      left: -29px;
+      right: -29px;
+      bottom: -3px;
     }
 
     .navbar-nav a:hover {
@@ -212,7 +219,7 @@
   <body>
     <nav>
       <div class="logo">
-        <img src="properties/hi.jpg" alt="Logo" />
+        <img src="properties/fnao.jpg" alt="Logo" />
       </div>
       <div class="navbar-nav">
         <a href="">Home</a>
