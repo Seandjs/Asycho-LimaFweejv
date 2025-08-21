@@ -355,6 +355,97 @@
       font-weight: 600;
       color: black;
     }
+
+    .cta{
+      margin:60px 0;
+      border-radius: 40px;
+      overflow:hidden;
+      background:#0c0d10;
+      color:#fff;
+      position:relative;
+      box-shadow:0 12px 30px rgba(0,0,0,.18);
+      margin-top: 160px;
+
+    }
+
+    .cta-inner{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:10px;
+      padding:46px
+    }
+
+    .cta h3{
+  font-size:28px;
+  margin:0 0 8px;
+  font-weight:800
+    }
+
+.cta p{
+  color:#cbd5e1;
+  max-width:560px
+
+    }
+
+    .cta form{
+      display:flex;
+      gap:10px;
+      margin-top:18px
+    }
+
+.input{
+  flex:1;
+  background:#11141a;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius: 40px;
+  padding:12px 16px;
+  color:#fff
+    }
+.cta .submit{
+  border-radius:40px;
+  padding:12px 18px;
+  background:#fff;
+  color:#111;
+  font-weight:700;
+  border:none;
+  transition: all 0.3s ease;
+  }
+
+  .cta .submit:hover{
+    transform: scale(1.05);
+      border: 1px solid rgba(255, 255, 255, 0.277);
+      background: rgba(255, 255, 255, 0.07);
+       backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      color: aliceblue;
+      transition: all 0.3s ease;  
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+  }
+
+  .device{
+    align-self:center;
+    justify-self:center;
+    transform:rotate(-12deg);
+    filter:drop-shadow(0 22px 30px rgba(0,0,0,.45))
+  }
+
+.device img{
+  position: absolute;
+  border-radius:16px ;
+  width:570px; 
+  bottom: -120px;
+  left: 130px;
+  }
+
+  .cta .curve{
+    position:absolute;
+    inset:auto 0 -50px 0;
+    height:120px;
+    border-bottom-left-radius:80px;
+    border-bottom-right-radius:80px
+  }
+
     @media (max-width: 768px) {
       .navbar-nav {
         display: none;
@@ -432,9 +523,9 @@
     <section id="home" class="home">
       <div class="content">
         <h1>
-          Control ur sanity: </br> Explore ur psychological </br>limits  with us      
+          Control ur sanity: <br> Explore ur psychological <br>limits  with us      
         </h1>
-        <p>We got to install microwave ovens, custom kitchen delivery</br> We got to move these refrigerators, We got to move these color TVs</p>
+        <p>We got to install microwave ovens, custom kitchen delivery<br> We got to move these refrigerators, We got to move these color TVs</p>
       </div>
     </section>
     <div class="container">
@@ -450,7 +541,7 @@
         <img src="properties/container1.jpg" alt="Travel">
         <div class="overlay">
           <h3>Envy <span>↗</span></h3>
-          <p></p>
+          <p>Increase your Envy to the most extreme and sadistic level</p>
         </div>
       </div>
 
@@ -458,7 +549,7 @@
         <img src="properties/container2.webp" alt="Adventure">
         <div class="overlay">
           <h3>Confidence <span>↗</span></h3>
-          <p>Sit facilis vitae verus montes posuere turpis erat turpis ornare consectetur.</p>
+          <p>Increase your Confidence to the level where you are confident enough to wipe your own office mates.</p>
         </div>
       </div>
 
@@ -466,32 +557,48 @@
         <img src="properties/container3.jpg" alt="Gear">
         <div class="overlay">
           <h3>Agression <span>↗</span></h3>
-          <p>Imperdiet tellus tempor bibendum euismod non metus morbi eget mauris.</p>
+          <p>Increase your Agression to a level where even lucifer and the other demons is jealous of ur evilness.</p>
         </div>
       </div>
     </div>
 
     <!-- Popular Now -->
+     <section class="popular">
     <div class="popular">
       <h3>Popular now</h3>
       <div class="popular-list">
         <div class="popular-item">
-          <p>Travel · Sep 1, 2023</p>
-          <h4>Unveiling hidden gems: Exploring off-the-beaten-path destinations</h4>
+          <p>Murder · Sep 1, 1994</p>
+          <h4>An Employee kill his own mates that have the best bussiness card in the office.</h4>
         </div>
         <div class="popular-item">
-          <p>Adventure · Sep 1, 2023</p>
-          <h4>Conquer the wild: Exploring terrains and conquering nature</h4>
+          <p>Confidence · Sep 2, 1994</p>
+          <h4>An Employee talks about himself killing his own mates.</h4>
         </div>
         <div class="popular-item">
-          <p>Gear · Sep 1, 2023</p>
-          <h4>Gear up for adventure: Equipment for outdoor enthusiasts</h4>
+          <p>Agression · Sep 4, 1994</p>
+          <h4>An Employee who brutally killed 2 prostitute he had hired himself</h4>
         </div>
       </div>
     </div>
-  </div>
-         </div>
     </section>
+
+    <section class="container cta fade-up">
+  <div class="cta-inner">
+    <div>
+      <h3>Join Our <br/> Psychology Academy</h3>
+      <p>You want to be like a frikin Patrick Bateman? come join us and learn sum.</p>
+      <form onsubmit="event.preventDefault()">
+        <input class="input" placeholder="Enter your email" type="email" required>
+        <button class="submit" type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+  <div class="curve" aria-hidden></div>
+</section>
+ <div class="device">
+      <img src="properties/subscribe.png" alt="Laptop mockup"/>
+    </div>
       </body>
   <script>
     const menu = document.querySelector("#menu");
