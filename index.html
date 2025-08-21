@@ -12,8 +12,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <style>
     :root {
@@ -41,7 +43,6 @@
       background-color: white;
       color: white;
       font-family: "Poppins", sans-serif;
-
     }
 
     nav {
@@ -56,7 +57,7 @@
       z-index: 999;
     }
 
-    nav a{
+    nav a {
       text-decoration: none;
       color: var(--color-text);
       font-weight: 500;
@@ -81,13 +82,13 @@
       margin-right: 790px;
       border: 1px solid rgba(255, 255, 255, 0.153);
       background: rgba(255, 255, 255, 0.07);
-       backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
       color: aliceblue;
-      transition: all 0.3s ease;  
+      transition: all 0.3s ease;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
       border-radius: 40px;
-      }  
+    }
 
     .navbar-nav a {
       position: relative;
@@ -98,14 +99,13 @@
       z-index: 99;
     }
 
-
-    .navbar-subs a{
+    .navbar-subs a {
       position: absolute;
       top: 40px;
       left: 88%;
       color: black;
       background-color: white;
-      padding: 6px 10px ;
+      padding: 6px 10px;
       border-radius: 40px;
       transition: all 0.3s ease-in-out;
     }
@@ -113,13 +113,12 @@
     .navbar-subs a:hover {
       border: 1px solid rgba(255, 255, 255, 0.277);
       background: rgba(255, 255, 255, 0.07);
-       backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
       color: aliceblue;
-      transition: all 0.3s ease;  
+      transition: all 0.3s ease;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-
-        }
+    }
 
     .navbar-nav a::before {
       content: "";
@@ -137,7 +136,6 @@
     }
 
     .navbar-nav a:hover::before {
-     
       transform: scale(1);
       top: -3px;
       left: -29px;
@@ -166,6 +164,9 @@
       background-position: center;
       backdrop-filter: blur(10px);
       min-height: 100vh;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.45));
     }
 
     .home .content {
@@ -182,17 +183,17 @@
       font-size: 3.5rem;
       font-weight: 800;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-      font-family: 'Inter', sans-serif;
+      font-family: "Inter", sans-serif;
     }
 
-    .home .content p{
+    .home .content p {
       color: white;
       font-weight: 200;
       opacity: 80%;
     }
 
     .services {
-     background-color: white;
+      background-color: white;
       min-height: 100vh;
     }
 
@@ -203,10 +204,9 @@
       color: black;
       margin-left: 154px;
       top: 90px;
-
     }
 
-     .header {
+    .header {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -219,20 +219,17 @@
       font-weight: bold;
       color: black;
     }
-   
-
-  
 
     .navbar-nav.active {
       display: none;
     }
 
-     .container {
+    .container {
       max-width: 1100px;
       margin: auto;
     }
 
-       .browse-btn {
+    .browse-btn {
       border: 1px solid #ccc;
       background: transparent;
       padding: 8px 18px;
@@ -260,7 +257,7 @@
       position: relative;
       border-radius: 15px;
       overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       cursor: pointer;
     }
 
@@ -366,155 +363,188 @@
       color: black;
     }
 
-    .cta{
-      margin:60px 0;
+    .cta {
+      margin: 60px 0;
       border-radius: 40px;
-      overflow:hidden;
-      background:#0c0d10;
-      color:#fff;
-      position:relative;
-      box-shadow:0 12px 30px rgba(0,0,0,.18);
+      overflow: hidden;
+      background: #0c0d10;
+      color: #fff;
+      position: relative;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
       margin-top: 160px;
-
     }
 
-    .cta-inner{
-      display:grid;
-      grid-template-columns:1.1fr .9fr;
-      gap:10px;
-      padding:46px
+    .cta-inner {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 10px;
+      padding: 46px;
     }
 
-    .cta h3{
-  font-size:28px;
-  margin:0 0 8px;
-  font-weight:800
+    .cta h3 {
+      font-size: 28px;
+      margin: 0 0 8px;
+      font-weight: 800;
     }
 
-.cta p{
-  color:#cbd5e1;
-  max-width:560px
-
+    .cta p {
+      color: #cbd5e1;
+      max-width: 560px;
     }
 
-    .cta form{
-      display:flex;
-      gap:10px;
-      margin-top:18px
+    .cta form {
+      display: flex;
+      gap: 10px;
+      margin-top: 18px;
     }
 
-.input{
-  flex:1;
-  background:#11141a;
-  border:1px solid rgba(255,255,255,.12);
-  border-radius: 40px;
-  padding:12px 16px;
-  color:#fff
+    .input {
+      flex: 1;
+      background: #11141a;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 40px;
+      padding: 12px 16px;
+      color: #fff;
     }
-.cta .submit{
-  border-radius:40px;
-  padding:12px 18px;
-  background:#fff;
-  color:#111;
-  font-weight:700;
-  border:none;
-  transition: all 0.3s ease;
-  }
+    .cta .submit {
+      border-radius: 40px;
+      padding: 12px 18px;
+      background: #fff;
+      color: #111;
+      font-weight: 700;
+      border: none;
+      transition: all 0.3s ease;
+    }
 
-  .cta .submit:hover{
-    transform: scale(1.05);
+    .cta .submit:hover {
+      transform: scale(1.05);
       border: 1px solid rgba(255, 255, 255, 0.277);
       background: rgba(255, 255, 255, 0.07);
-       backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
       color: aliceblue;
-      transition: all 0.3s ease;  
+      transition: all 0.3s ease;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
 
-  }
+    .device {
+      align-self: center;
+      justify-self: center;
+      transform: rotate(-12deg);
+      filter: drop-shadow(0 22px 30px rgba(0, 0, 0, 0.45));
+    }
 
-  .device{
-    align-self:center;
-    justify-self:center;
-    transform:rotate(-12deg);
-    filter:drop-shadow(0 22px 30px rgba(0,0,0,.45))
-  }
+    .device img {
+      position: absolute;
+      border-radius: 16px;
+      width: 570px;
+      bottom: -120px;
+      left: 130px;
+    }
 
-.device img{
-  position: absolute;
-  border-radius:16px ;
-  width:570px; 
-  bottom: -120px;
-  left: 130px;
-  }
-
-  .cta .curve{
-    position:absolute;
-    inset:auto 0 -50px 0;
-    height:120px;
-    border-bottom-left-radius:80px;
-    border-bottom-right-radius:80px
-  }
+    .cta .curve {
+      position: absolute;
+      inset: auto 0 -50px 0;
+      height: 120px;
+      border-bottom-left-radius: 80px;
+      border-bottom-right-radius: 80px;
+    }
 
     @media (max-width: 768px) {
+      .logo img {
+        width: 170px;
+        border-radius: 50px;
+        margin-top: -40px;
+        margin-left: -20px;
+      }
+
+      .navbar-subs {
+        display: none;
+      }
+
       .navbar-nav {
         display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 20px;
-        right: 60px;
-        gap: 20px;
-      }
-
-      .navbar-nav.active {
-        display: flex;
-      }
-
-      .navbar-nav a {
-        margin: 0.15rem 0;
-      }
-
-      .navbar-nav a::before {
-        top: -5px;
-        left: -5px;
-        right: -5px;
-        bottom: -5px;
       }
 
       #menu {
         display: block;
-      }
-
-      #bars {
+        color: white;
         font-size: 24px;
-        color: var(--color-text);
+        margin-right: 20px;
+        margin-top: -40px;
+        filter: drop-shadow(-1px 0 0 black) drop-shadow(1px 0 0 black)
+          drop-shadow(0 -1px 0 black) drop-shadow(0 1px 0 black);
       }
 
-      .home .content h1 {
-        font-size: 3rem;
+      .navbar-extra {
+        display: flex;
+        align-items: center;
       }
 
-      .home .content h1 span {
-        font-size: 2.6rem;
+      .home .content {
+        top: 50%;
+        left: 40%;
+        transform: translate(-50%, -50%);
       }
 
-      .home .content h1 span span {
-        font-size: 2.57rem;
+      .home .content p {
+        color: black;
+        filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.5));
       }
 
-      .logo img {
-        width: 50px;
-        height: 50px;
+      .cta-inner {
+        grid-template-columns: 1fr;
       }
 
-      .navbar-extra a {
-        font-size: 12px;
+      .device img {
+        display: none;
+      }
+
+      .header h2 {
+        font-size: 24px;
+        margin-left: 20px;
+      }
+
+      .header button {
+        margin-right: 20px;
+      }
+
+      .cards {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+
+      .card {
+        width: 100%;
+      }
+
+      .popular h3 {
+        font-size: 20px;
+        margin-left: 20px;
+      }
+
+      .popular-list {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+
+      .cta {
+        margin: 20px;
       }
     }
   </style>
   <body>
     <nav>
-      <div class="logo">
+      <div
+        class="logo"
+        style="
+          filter: drop-shadow(-1px 0 0 black) /* kiri */
+            drop-shadow(1px 0 0 black) /* kanan */ drop-shadow(0 -1px 0 black)
+            /* atas */ drop-shadow(0 1px 0 black); /* bawah */
+        "
+      >
         <img src="properties/logo.png" alt="Logo" />
       </div>
       <div class="navbar-nav">
@@ -533,96 +563,108 @@
     <section id="home" class="home">
       <div class="content">
         <h1>
-          Control ur sanity: <br> Explore ur psychological <br>limits  with us      
+          Control ur sanity: <br />
+          Explore ur psychological <br />limits with us
         </h1>
-        <p>We got to install microwave ovens, custom kitchen delivery<br> We got to move these refrigerators, We got to move these color TVs</p>
+        <p>
+          We got to install microwave ovens, custom kitchen delivery<br />
+          We got to move these refrigerators, We got to move these color TVs
+        </p>
       </div>
     </section>
     <div class="container">
-    <!-- Header -->
-    <div class="header">
-      <h2>Our Services</h2>
-      <button class="browse-btn">Subscribe to our Services</button>
-    </div>
+      <!-- Header -->
+      <div class="header">
+        <h2>Our Services</h2>
+        <button class="browse-btn">Subscribe to our Services</button>
+      </div>
 
-    <!-- Cards -->
-    <div class="cards">
-      <div class="card">
-        <img src="properties/container1.jpg" alt="Travel">
-        <div class="overlay">
-          <h3>Envy <span>↗</span></h3>
-          <p>Increase your Envy to the most extreme and sadistic level</p>
+      <!-- Cards -->
+      <div class="cards">
+        <div class="card">
+          <img src="properties/container1.jpg" alt="Travel" />
+          <div class="overlay">
+            <h3>Envy <span>↗</span></h3>
+            <p>Increase your Envy to the most extreme and sadistic level</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="properties/container2.webp" alt="Adventure" />
+          <div class="overlay">
+            <h3>Confidence <span>↗</span></h3>
+            <p>
+              Increase your Confidence to the level where you are confident
+              enough to wipe your own office mates.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="properties/container3.jpg" alt="Gear" />
+          <div class="overlay">
+            <h3>Agression <span>↗</span></h3>
+            <p>
+              Increase your Agression to a level where even lucifer and the
+              other demons is jealous of ur evilness.
+            </p>
+          </div>
         </div>
       </div>
 
-      <div class="card">
-        <img src="properties/container2.webp" alt="Adventure">
-        <div class="overlay">
-          <h3>Confidence <span>↗</span></h3>
-          <p>Increase your Confidence to the level where you are confident enough to wipe your own office mates.</p>
+      <!-- Popular Now -->
+      <section class="popular">
+        <div class="popular">
+          <h3>Popular now</h3>
+          <div class="popular-list">
+            <div class="popular-item">
+              <p>Murder · Sep 1, 1994</p>
+              <h4>
+                An Employee kill his own mates that have the best bussiness card
+                in the office.
+              </h4>
+            </div>
+            <div class="popular-item">
+              <p>Confidence · Sep 2, 1994</p>
+              <h4>An Employee talks about himself killing his own mates.</h4>
+            </div>
+            <div class="popular-item">
+              <p>Agression · Sep 4, 1994</p>
+              <h4>
+                An Employee who brutally killed 2 prostitute he had hired
+                himself
+              </h4>
+            </div>
+          </div>
         </div>
+      </section>
+      <section class="container cta fade-up">
+        <div class="cta-inner">
+          <div>
+            <h3>
+              Join Our <br />
+              Psychology Academy
+            </h3>
+            <p>
+              You want to be like a frikin Patrick Bateman? come join us and
+              learn sum.
+            </p>
+            <form onsubmit="event.preventDefault()">
+              <input
+                class="input"
+                placeholder="Enter your email"
+                type="email"
+                required
+              />
+              <button class="submit" type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+        <div class="curve" aria-hidden="true"></div>
+      </section>
+      <div class="device">
+        <img src="properties/subscribe.png" alt="Laptop mockup" />
       </div>
-
-      <div class="card">
-        <img src="properties/container3.jpg" alt="Gear">
-        <div class="overlay">
-          <h3>Agression <span>↗</span></h3>
-          <p>Increase your Agression to a level where even lucifer and the other demons is jealous of ur evilness.</p>
-        </div>
-      </div>
     </div>
-
-    <!-- Popular Now -->
-     <section class="popular">
-    <div class="popular">
-      <h3>Popular now</h3>
-      <div class="popular-list">
-        <div class="popular-item">
-          <p>Murder · Sep 1, 1994</p>
-          <h4>An Employee kill his own mates that have the best bussiness card in the office.</h4>
-        </div>
-        <div class="popular-item">
-          <p>Confidence · Sep 2, 1994</p>
-          <h4>An Employee talks about himself killing his own mates.</h4>
-        </div>
-        <div class="popular-item">
-          <p>Agression · Sep 4, 1994</p>
-          <h4>An Employee who brutally killed 2 prostitute he had hired himself</h4>
-        </div>
-      </div>
-    </div>
-    </section>
-
-    <section class="container cta fade-up">
-  <div class="cta-inner">
-    <div>
-      <h3>Join Our <br/> Psychology Academy</h3>
-      <p>You want to be like a frikin Patrick Bateman? come join us and learn sum.</p>
-      <form onsubmit="event.preventDefault()">
-        <input class="input" placeholder="Enter your email" type="email" required>
-        <button class="submit" type="submit">Subscribe</button>
-      </form>
-    </div>
-  </div>
-  <div class="curve" aria-hidden></div>
-</section>
- <div class="device">
-      <img src="properties/subscribe.png" alt="Laptop mockup"/>
-    </div>
-      </body>
-  <script>
-    const menu = document.querySelector("#menu");
-    const navbarNav = document.querySelector(".navbar-nav");
-
-    menu.addEventListener("click", function (e) {
-      e.preventDefault();
-      navbarNav.classList.toggle("active");
-    });
-
-    document.addEventListener("click", function (e) {
-      if (!menu.contains(e.target) && !navbarNav.contains(e.target)) {
-        navbarNav.classList.remove("active");
-      }
-    });
-  </script>
+  </body>
 </html>
