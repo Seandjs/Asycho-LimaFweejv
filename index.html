@@ -73,9 +73,20 @@
     .navbar-nav {
       display: flex;
       gap: 33px;
-      padding: 0.4rem 2rem;
+      padding-right: 20px;
+      padding-left: 20px;
+      padding-top: 5px;
+      padding-bottom: 5px;
       margin-bottom: 38px;
       margin-right: 790px;
+      border: 1px solid rgba(255, 255, 255, 0.153);
+      background: rgba(255, 255, 255, 0.07);
+       backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      color: aliceblue;
+      transition: all 0.3s ease;  
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      border-radius: 40px;
       }  
 
     .navbar-nav a {
@@ -86,6 +97,7 @@
       padding: 0.5rem 1rem;
       z-index: 99;
     }
+
 
     .navbar-subs a{
       position: absolute;
@@ -99,7 +111,6 @@
     }
 
     .navbar-subs a:hover {
-      transform: scale(1.1);
       border: 1px solid rgba(255, 255, 255, 0.277);
       background: rgba(255, 255, 255, 0.07);
        backdrop-filter: blur(14px);
@@ -117,7 +128,6 @@
       left: -2px;
       right: -2px;
       bottom: -3px;
-      background-color: var(--color-accent-brown);
       border-radius: 30px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.447);
       z-index: -1;
@@ -127,7 +137,7 @@
     }
 
     .navbar-nav a:hover::before {
-      opacity: 1;
+     
       transform: scale(1);
       top: -3px;
       left: -29px;
