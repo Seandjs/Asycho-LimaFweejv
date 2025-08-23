@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Buronid</title>
+    <title>Asycho</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
@@ -36,13 +36,28 @@
       margin: 0;
       padding: 0;
       border: none;
+      scroll-behavior: smooth;
       box-sizing: border-box;
     }
 
+    html,
     body {
       background-color: white;
       color: white;
       font-family: "Poppins", sans-serif;
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      max-height: 90vh;
+    }
+
+    nav {
+      pointer-events: none; /* Navbar container tidak terima pointer */
+    }
+
+    nav > * {
+      pointer-events: auto; /* Tapi isinya tetap bisa diklik */
     }
 
     nav {
@@ -54,6 +69,7 @@
       top: 0;
       left: 0;
       right: 0;
+      background: none;
       z-index: 999;
     }
 
@@ -61,6 +77,7 @@
       text-decoration: none;
       color: var(--color-text);
       font-weight: 500;
+      filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
       transition: color 0.3s ease-in-out;
     }
 
@@ -69,6 +86,8 @@
       border-radius: 50px;
       margin-top: -40px;
       margin-left: 60px;
+      opacity: 1;
+      transition: filter 0.3s ease;
     }
 
     .navbar-nav {
@@ -96,7 +115,7 @@
       color: white;
       transition: all 0.3s ease-in-out;
       padding: 0.5rem 1rem;
-      z-index: 99;
+      z-index: 999;
     }
 
     .navbar-subs a {
@@ -156,6 +175,9 @@
 
     #menu {
       display: none;
+      cursor: pointer;
+      font-size: 24px;
+      transition: all 0.3s ease;
     }
 
     .home {
@@ -237,6 +259,7 @@
       cursor: pointer;
       font-size: 14px;
       transition: all 0.3s ease;
+      z-index: 899;
     }
 
     .browse-btn:hover {
@@ -371,7 +394,7 @@
       color: #fff;
       position: relative;
       box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
-      margin-top: 160px;
+      margin-top: 100px;
     }
 
     .cta-inner {
@@ -405,6 +428,7 @@
       border-radius: 40px;
       padding: 12px 16px;
       color: #fff;
+      z-index: 200;
     }
     .cta .submit {
       border-radius: 40px;
@@ -414,6 +438,8 @@
       font-weight: 700;
       border: none;
       transition: all 0.3s ease;
+      z-index: 899;
+      cursor: pointer;
     }
 
     .cta .submit:hover {
@@ -450,6 +476,57 @@
       border-bottom-right-radius: 80px;
     }
 
+    footer {
+      background-color: #11141a;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      width: 100%;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+
+    .services {
+      padding: 1.5rem 20px;
+    }
+
+    .menu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 10;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .menu-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    #menu.active {
+      color: #333;
+      z-index: 1000;
+    }
+
+    #bars {
+      transition: all 0.3s ease;
+    }
+
+    #menu.active #bars {
+      transform: rotate(90deg);
+    }
+
+    .container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
     @media (max-width: 768px) {
       .logo img {
         width: 170px;
@@ -458,11 +535,56 @@
         margin-left: -20px;
       }
 
+      .navbar-nav {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 280px;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        padding: 80px 2rem 2rem 2rem;
+        border-radius: 0;
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+        transform: translateX(100%);
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        gap: 2rem;
+        margin: 0;
+        z-index: 999;
+      }
+
+      .navbar-nav.active {
+        display: flex;
+        transform: translateX(0);
+        z-index: 999;
+      }
+
       .navbar-subs {
         display: none;
       }
 
-      .navbar-nav {
+      .navbar-nav a {
+        color: #333;
+        font-size: 1.1rem;
+        font-weight: 500;
+        padding: 1rem 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        position: relative;
+        display: block;
+      }
+
+      .navbar-nav a:hover {
+        background: rgba(0, 0, 0, 0.05);
+        padding-left: 1rem;
+        border-radius: 8px;
+        color: #000;
+      }
+
+      .navbar-nav a::before {
         display: none;
       }
 
@@ -470,10 +592,7 @@
         display: block;
         color: white;
         font-size: 24px;
-        margin-right: 20px;
         margin-top: -40px;
-        filter: drop-shadow(-1px 0 0 black) drop-shadow(1px 0 0 black)
-          drop-shadow(0 -1px 0 black) drop-shadow(0 1px 0 black);
       }
 
       .navbar-extra {
@@ -483,7 +602,7 @@
 
       .home .content {
         top: 50%;
-        left: 40%;
+        left: 35.5%;
         transform: translate(-50%, -50%);
       }
 
@@ -502,11 +621,6 @@
 
       .header h2 {
         font-size: 24px;
-        margin-left: 20px;
-      }
-
-      .header button {
-        margin-right: 20px;
       }
 
       .cards {
@@ -533,25 +647,26 @@
       .cta {
         margin: 20px;
       }
+
+      nav {
+        z-index: 999;
+      }
+
+      footer {
+        border-radius: 0;
+      }
     }
   </style>
   <body>
+    <div class="menu-overlay" id="menuOverlay"></div>
     <nav>
-      <div
-        class="logo"
-        style="
-          filter: drop-shadow(-1px 0 0 black) /* kiri */
-            drop-shadow(1px 0 0 black) /* kanan */ drop-shadow(0 -1px 0 black)
-            /* atas */ drop-shadow(0 1px 0 black); /* bawah */
-        "
-      >
+      <div class="logo">
         <img src="properties/logo.png" alt="Logo" />
       </div>
-      <div class="navbar-nav">
-        <a href="">Home</a>
-        <a href="">Services</a>
-        <a href="">List</a>
-        <a href="">Contact</a>
+      <div class="navbar-nav" id="navbarNav">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
       </div>
       <div class="navbar-subs">
         <a href="">Subscribe</a>
@@ -573,47 +688,48 @@
       </div>
     </section>
     <div class="container">
-      <!-- Header -->
-      <div class="header">
-        <h2>Our Services</h2>
-        <button class="browse-btn">Subscribe to our Services</button>
-      </div>
+      <section class="services" id="services">
+        <!-- Header -->
+        <div class="header">
+          <h2>Our Services</h2>
+          <button class="browse-btn">Subscribe to our Services</button>
+        </div>
 
-      <!-- Cards -->
-      <div class="cards">
-        <div class="card">
-          <img src="properties/container1.jpg" alt="Travel" />
-          <div class="overlay">
-            <h3>Envy <span>↗</span></h3>
-            <p>Increase your Envy to the most extreme and sadistic level</p>
+        <!-- Cards -->
+        <div class="cards">
+          <div class="card">
+            <img src="properties/container1.jpg" alt="Travel" />
+            <div class="overlay">
+              <h3>Envy <span>↗</span></h3>
+              <p>Increase your Envy to the most extreme and sadistic level</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="properties/container2.webp" alt="Adventure" />
+            <div class="overlay">
+              <h3>Confidence <span>↗</span></h3>
+              <p>
+                Increase your Confidence to the level where you are confident
+                enough to wipe your own office mates.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="properties/container3.jpg" alt="Gear" />
+            <div class="overlay">
+              <h3>Agression <span>↗</span></h3>
+              <p>
+                Increase your Agression to a level where even lucifer and the
+                other demons is jealous of ur evilness.
+              </p>
+            </div>
           </div>
         </div>
 
-        <div class="card">
-          <img src="properties/container2.webp" alt="Adventure" />
-          <div class="overlay">
-            <h3>Confidence <span>↗</span></h3>
-            <p>
-              Increase your Confidence to the level where you are confident
-              enough to wipe your own office mates.
-            </p>
-          </div>
-        </div>
+        <!-- Popular Now -->
 
-        <div class="card">
-          <img src="properties/container3.jpg" alt="Gear" />
-          <div class="overlay">
-            <h3>Agression <span>↗</span></h3>
-            <p>
-              Increase your Agression to a level where even lucifer and the
-              other demons is jealous of ur evilness.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Popular Now -->
-      <section class="popular">
         <div class="popular">
           <h3>Popular now</h3>
           <div class="popular-list">
@@ -638,7 +754,7 @@
           </div>
         </div>
       </section>
-      <section class="container cta fade-up">
+      <section class="container cta fade-up" id="contact">
         <div class="cta-inner">
           <div>
             <h3>
@@ -666,5 +782,56 @@
         <img src="properties/subscribe.png" alt="Laptop mockup" />
       </div>
     </div>
+    <footer>
+      <p>&copy; 2025 1/2 K.O.N.Z. Yareu.</p>
+    </footer>
   </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const logo = document.querySelector(".logo img");
+      const homeSection = document.querySelector("#home");
+      const menu = document.querySelector("#menu");
+
+      function checkScroll() {
+        const homeBottom = homeSection.offsetTop + homeSection.offsetHeight;
+        const scrollPos = window.scrollY;
+
+        if (scrollPos >= homeBottom) {
+          menu.style.color = "black";
+          logo.style.filter = "brightness(0)";
+        } else {
+          menu.style.color = "white";
+          logo.style.filter = "brightness(1)";
+        }
+      }
+
+      window.addEventListener("scroll", checkScroll);
+      checkScroll();
+    });
+
+    const navbarNav = document.querySelector("#navbarNav");
+    const menuOverlay = document.querySelector("#menuOverlay");
+
+    menu.addEventListener("click", function (e) {
+      e.preventDefault();
+      menu.classList.toggle("active");
+      navbarNav.classList.toggle("active");
+      menuOverlay.classList.toggle("active");
+    });
+
+    menuOverlay.addEventListener("click", function () {
+      menu.classList.remove("active");
+      navbarNav.classList.remove("active");
+      menuOverlay.classList.remove("active");
+    });
+
+    const navLinks = navbarNav.querySelectorAll("a");
+    navLinks.forEach((link) => {
+      link.addEventListener("click", function () {
+        menu.classList.remove("active");
+        navbarNav.classList.remove("active");
+        menuOverlay.classList.remove("active");
+      });
+    });
+  </script>
 </html>
